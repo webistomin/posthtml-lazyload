@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "commitmsg": "conventional-changelog-lint -p angular -e",
+    "precommit": "npm run lint",
+  }
+}
