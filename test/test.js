@@ -6,16 +6,24 @@ const { readFileSync } = require('fs')
 const path = require('path')
 const posthtml = require('posthtml')
 const fixtures = path.join(__dirname, 'fixtures')
-const options = {
-  loading: 'auto',
-  class: 'lazyload'
+
+const customOptions = {
+  loading: 'eager',
+  class: 'lazy'
 }
 
 test('basic', (t) => {
   return compare(t, 'basic')
 })
 
-function compare (t, name) {
+test('set custom class and loading option', (t) => {
+  return compare(t, 'custom', customOptions)
+})
+
+function compare (t, name, options = {
+  loading: 'lazy',
+  class: 'lazyload'
+}) {
   const html = readFileSync(path.join(fixtures, `${name}.html`), 'utf8')
   const expected = readFileSync(path.join(fixtures, `${name}.expected.html`), 'utf8')
 
