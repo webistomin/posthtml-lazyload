@@ -43,7 +43,7 @@ After:
 ## Demo
 [**DEMO**](https://mathiasbynens.be/demo/img-loading-lazy)
 
-Make sure you turn on both the "Enable lazy frame loading" and "Enable lazy image loading" flags.
+Make sure you turn on both the `Enable lazy frame loading` and `Enable lazy image loading` flags.
 
 ## Install
 
