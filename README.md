@@ -5,7 +5,7 @@
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
 
- It is possible to natively lazy load images through the loading="lazy" attribute on images and iframes, and it’s already possible on Chrome 75 (currently Canary). This plugin will do it for you!
+ It is possible to natively lazy load images through the `loading="lazy"` attribute on images and iframes, and it’s already possible on Chrome 75 (currently Canary). This plugin will do it for you!
  
  Read more in [Addy Osmani Blog](https://addyosmani.com/blog/lazy-loading/).
 
@@ -13,9 +13,7 @@ Before:
 ``` html
 <html>
   <body>
-    <a href="/" target="_blank">External link</a>
-    <a href="/" target="_blank" rel="nofollow">External link</a>
-    <a href="/" target="_self">Home</a>
+    <img src="http://posthtml.github.io/posthtml/logo.svg" alt="PostHTML" width="220" heigth="200" class="lazyload"> 
   </body>
 </html>
 ```
@@ -24,15 +22,13 @@ After:
 ``` html
 <html>
   <body>
-    <a href="/" target="_blank" rel="noopener noreferrer">External link</a>
-    <a href="/" target="_blank" rel="nofollow">External link</a>
-    <a href="/" target="_self">Home</a>
+    <img src="http://posthtml.github.io/posthtml/logo.svg" alt="PostHTML" width="220" heigth="200" class="lazyload" loading="lazy"> 
   </body>
 </html>
 ```
 
 ## Demo
-[DEMO](https://mathiasbynens.be/demo/img-loading-lazy)
+[**DEMO**](https://mathiasbynens.be/demo/img-loading-lazy)
 
 Make sure you turn on both the "Enable lazy frame loading" and "Enable lazy image loading" flags.
 
@@ -67,18 +63,10 @@ gulp.task('posthtml', () => gulp.src('./build/*.html')
 
 ## Options
 
-### loading
-
-Takes `string`.
-Describes loading attribute.
-Possible subsets: `auto`, `eager`, `lazy`.
-Default value: `'lazy'`.
-
-### class
-
-Takes `string`.
-The CSS selector of the elements to load lazily
-Default value: `lazyload`.
+| Option | Type | description | Possible subsets | Default value |
+| ------ | ------ | ------ | ------ | ------ |
+ loading | `string` | Describes loading attribute. | `auto`, `eager`, `lazy` | `lazy` |
+ class | `string` | Class of the elements to load lazily | Any valid CSS class name | `lazyload` |
 
 ### Contributing
 
