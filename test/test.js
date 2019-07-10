@@ -16,6 +16,10 @@ test('basic', (t) => {
   return compare(t, 'basic')
 })
 
+test('ignore all tags except img and iframe', (t) => {
+  return compare(t, 'ignore')
+})
+
 test('set custom class and loading option', (t) => {
   return compare(t, 'custom', customOptions)
 })
@@ -30,8 +34,6 @@ function compare (t, name, options = {
   return posthtml([plugin(options)])
     .process(html)
     .then((res) => {
-      console.log(res.html)
-      console.log(expected)
       t.truthy(res.html === expected)
     })
 }

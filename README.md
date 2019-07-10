@@ -13,7 +13,13 @@ Before:
 ``` html
 <html>
   <body>
-    <img src="http://posthtml.github.io/posthtml/logo.svg" alt="PostHTML" width="220" heigth="200" class="lazyload"> 
+    <img 
+      src="http://posthtml.github.io/posthtml/logo.svg" 
+      alt="PostHTML" 
+      width="220"
+      heigth="200" 
+      class="lazyload"
+    > 
   </body>
 </html>
 ```
@@ -22,7 +28,14 @@ After:
 ``` html
 <html>
   <body>
-    <img src="http://posthtml.github.io/posthtml/logo.svg" alt="PostHTML" width="220" heigth="200" class="lazyload" loading="lazy"> 
+    <img 
+      src="http://posthtml.github.io/posthtml/logo.svg" 
+      alt="PostHTML" 
+      width="220"
+      heigth="200" 
+      class="lazyload"
+      loading="lazy"
+    > 
   </body>
 </html>
 ```
