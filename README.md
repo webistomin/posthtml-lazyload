@@ -5,7 +5,9 @@
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
 
-Clone this repo and explain what your plugin do and why thousands of people need it ;)
+ It is possible to natively lazy load images through the loading="lazy" attribute on images and iframes, and it’s already possible on Chrome 75 (currently Canary). This plugin will do it for you!
+ 
+ Read more in [Addy Osmani Blog](https://addyosmani.com/blog/lazy-loading/).
 
 Before:
 ``` html
@@ -29,6 +31,11 @@ After:
 </html>
 ```
 
+## Demo
+[DEMO](https://mathiasbynens.be/demo/img-loading-lazy)
+
+Make sure you turn on both the "Enable lazy frame loading" and "Enable lazy image loading" flags.
+
 ## Install
 
 ```npm
@@ -37,52 +44,41 @@ npm i posthtml-lazyload --save-dev
 
 ## Usage
 
-Describe how people can use this plugin. Include info about build systems if it's
-necessary.
+### Gulp
 
 ``` js
-const fs = require('fs');
-const posthtml = require('posthtml');
-const posthtmlPlugin = require('posthtml-plugin');
+const gulp = require('gulp');
+const postHTML = require('gulp-posthtml');
+const postHTMLLazyLoad = require('posthtml-lazyload');
 
-posthtml()
-    .use(posthtmlPlugin({ /* options */ }))
-    .process(html/*, options */)
-    .then(result => fs.writeFileSync('./after.html', result.html));
+const config = () => ({
+  plugins: [
+    postHTMLLazyLoad({
+      loading: 'eager',
+      class: 'lazy',
+    }),
+  ],
+});
+
+gulp.task('posthtml', () => gulp.src('./build/*.html')
+  .pipe(postHTML(config))
+  .pipe(gulp.dest('./build')));
 ```
 
 ## Options
 
-Describe all features of your plugin with examples of usage.
+### loading
 
-### Feature
-Before:
-``` html
-<html>
-  <body>
-    <p>OMG</p>
-  </body>
-</html>
-```
-Add option:
-``` js
-const fs = require('fs');
-const posthtml = require('posthtml');
-const posthtmlPlugin = require('posthtml-plugin');
+Takes `string`.
+Describes loading attribute.
+Possible subsets: `auto`, `eager`, `lazy`.
+Default value: `'lazy'`.
 
-posthtml()
-    .use(posthtmlPlugin({ feature: 'wow' }))
-    .process(html/*, options */)
-    .then(result => fs.writeFileSync('./after.html', result.html));
-```
-After:
-``` html
-<html>
-  <body>
-    <p class="wow">OMG</p>
-  </body>
-</html>
-```
+### class
+
+Takes `string`.
+The CSS selector of the elements to load lazily
+Default value: `lazyload`.
 
 ### Contributing
 
