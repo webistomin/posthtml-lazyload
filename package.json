@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/webistomin/posthtml-lazyload/issues",
   "dependencies": {
-    "posthtml": "^0.11.4"
+    "posthtml": "^0.12.0"
   },
   "devDependencies": {
     "ava": "^2.2.0",
