@@ -6,7 +6,7 @@
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
 
- It is possible to natively lazy load images through the `loading="lazy"` attribute on images and iframes, and it’s already possible on Chrome 76. This plugin will do it for you!
+ It is possible to natively lazy load images through the `loading="lazy"` attribute on images and iframes, and [it’s already possible](https://caniuse.com/#feat=loading-lazy-attr) on Chrome 76. This plugin will do it for you!
  
  Read more in [Addy Osmani Blog](https://addyosmani.com/blog/lazy-loading/).
 
@@ -44,7 +44,7 @@ After:
 ## Demo
 [**DEMO**](https://mathiasbynens.be/demo/img-loading-lazy)
 
-Make sure you turn on both the `Enable lazy frame loading` and `Enable lazy image loading` flags.
+If you are using Chrome lower than 76 make sure you turn on both the `Enable lazy frame loading` and `Enable lazy image loading` flags.
 
 ## Install
 
