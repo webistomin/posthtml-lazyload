@@ -56,7 +56,7 @@ npm i posthtml-lazyload --save-dev
 
 ### Gulp
 
-``` js
+```js
 const gulp = require('gulp');
 const postHTML = require('gulp-posthtml');
 const postHTMLLazyLoad = require('posthtml-lazyload');
@@ -73,6 +73,32 @@ const config = () => ({
 gulp.task('posthtml', () => gulp.src('./build/*.html')
   .pipe(postHTML(config))
   .pipe(gulp.dest('./build')));
+```
+
+### Webpack
+
+```js
+module: {
+  rules: [
+    {
+      test: /\.html$/,
+      use: [
+        'html-loader',
+        {
+          loader: 'posthtml-loader',
+          options: {
+            plugins: [
+              require('posthtml-lazyload')({
+                 loading: 'eager',
+                 class: 'lazy',
+               })
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ## Options
