@@ -29,7 +29,7 @@ After:
    width="220"
    heigth="200" 
    class="lazyload"
-   loading="lazy"
+   loading="lazy" <---
  > 
 ```
 
