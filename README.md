@@ -38,6 +38,8 @@ After:
 
 If you are using Chrome lower than 76 make sure you turn on both the `Enable lazy frame loading` and `Enable lazy image loading` flags.
 
+[**CAN I USE**](https://caniuse.com/#feat=loading-lazy-attr)
+
 ## Install
 
 ```npm
