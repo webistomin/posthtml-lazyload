@@ -12,33 +12,25 @@
 
 Before:
 ``` html
-<html>
-  <body>
-    <img 
-      src="http://posthtml.github.io/posthtml/logo.svg" 
-      alt="PostHTML" 
-      width="220"
-      heigth="200" 
-      class="lazyload"
-    > 
-  </body>
-</html>
+ <img 
+   src="http://posthtml.github.io/posthtml/logo.svg" 
+   alt="PostHTML" 
+   width="220"
+   heigth="200" 
+   class="lazyload"
+ > 
 ```
 
 After:
 ``` html
-<html>
-  <body>
-    <img 
-      src="http://posthtml.github.io/posthtml/logo.svg" 
-      alt="PostHTML" 
-      width="220"
-      heigth="200" 
-      class="lazyload"
-      loading="lazy"
-    > 
-  </body>
-</html>
+ <img 
+   src="http://posthtml.github.io/posthtml/logo.svg" 
+   alt="PostHTML" 
+   width="220"
+   heigth="200" 
+   class="lazyload"
+   loading="lazy"
+ > 
 ```
 
 ## Demo
