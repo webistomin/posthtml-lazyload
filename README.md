@@ -19,6 +19,12 @@ Before:
    heigth="200" 
    class="lazyload"
  > 
+
+<iframe 
+   src="video-player.html" 
+   class="lazyload"
+>
+</iframe>
 ```
 
 After:
@@ -31,6 +37,13 @@ After:
    class="lazyload"
    loading="lazy" <---
  > 
+
+<iframe 
+   src="video-player.html" 
+   class="lazyload"
+   loading="lazy"
+>
+</iframe>
 ```
 
 ## Demo
