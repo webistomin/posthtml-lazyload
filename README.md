@@ -6,10 +6,12 @@
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
 
- It is possible to natively lazy load images through the `loading="lazy"` attribute on images and iframes, and [it’s already possible](https://caniuse.com/#feat=loading-lazy-attr) on Chrome 76. This plugin will do it for you!
+ It is possible to natively lazy load content through the `loading="lazy"` attribute on images and iframes, and [it’s already possible](https://caniuse.com/#feat=loading-lazy-attr) on last 2 versions modern browsers except safari. This plugin will do it for you!
  
  Read more in [Addy Osmani Blog](https://addyosmani.com/blog/lazy-loading/).
-
+ 
+ **⭐️ Star us on GitHub — it helps!**
+ 
 Before:
 ``` html
  <img 
@@ -63,6 +65,10 @@ npm i posthtml-lazyload --save-dev
 
 ### Gulp
 
+```npm
+npm i gulp-posthtml posthtml-lazyload --save-dev
+```
+
 ```js
 const gulp = require('gulp');
 const postHTML = require('gulp-posthtml');
@@ -83,6 +89,9 @@ gulp.task('posthtml', () => gulp.src('./build/*.html')
 ```
 
 ### Webpack
+```npm
+npm i html-loader posthtml-loader posthtml-lazyload --save-dev
+```
 
 ```js
 module: {
