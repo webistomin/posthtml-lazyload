@@ -6,11 +6,11 @@
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
 
- It is possible to natively lazy load content through the `loading="lazy"` attribute on images and iframes, and [it’s already possible](https://caniuse.com/#feat=loading-lazy-attr) on last 2 versions modern browsers except safari. This plugin will do it for you!
+ It is possible to natively lazy load content through the `loading="lazy"` attribute on images and iframes, and [it’s already possible](https://caniuse.com/#feat=loading-lazy-attr) on last 2 versions modern browsers except Safari. This plugin will do it for you!
  
  Read more in [Addy Osmani Blog](https://addyosmani.com/blog/lazy-loading/).
  
- **⭐️ Star us on GitHub — it helps!**
+ **⭐️ Star me on GitHub — it helps!**
  
 Before:
 ``` html
