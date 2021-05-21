@@ -1,7 +1,7 @@
 {
   "name": "posthtml-lazyload",
   "description": "PostHTML plugin to add native lazyload attribute",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "https://github.com/webistomin",
   "ava": {
     "verbose": "true"
