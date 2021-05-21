@@ -1,7 +1,7 @@
 # posthtml-lazyload <img align="right" width="220" height="200" title="PostHTML logo" src="http://posthtml.github.io/posthtml/logo.svg">
 
 [![NPM][npm]][npm-url]
-![npm](https://img.shields.io/npm/dm/posthtml-lazyload.svg)
+![npm](https://img.shields.io/npm/dt/posthtml-lazyload.svg)
 [![Deps][deps]][deps-url]
 [![DevDeps][dev-deps]][dev-deps-url]
 [![Build][build]][build-badge]
@@ -142,5 +142,5 @@ See [PostHTML Guidelines](https://github.com/posthtml/posthtml/tree/master/docs)
 [style]: https://img.shields.io/badge/code%20style-standard-yellow.svg
 [style-url]: http://standardjs.com/
 
-[build]: https://travis-ci.com/webistomin/posthtml-lazyload.svg?token=CqDseQbTs4cMwNAwVsgp&branch=master
-[build-badge]: https://travis-ci.com/webistomin/posthtml-lazyload
+[build]: https://github.com/webistomin/posthtml-lazyload/actions/workflows/ci.yml/badge.svg
+[build-badge]: https://github.com/webistomin/posthtml-lazyload/actions/workflows/ci.yml
